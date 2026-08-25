@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #222222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222222;
+    background-color: #FFFFFF;
+}
+
+/* Navbar */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+    z-index: 100;
+    width: 100%;
+}
+
+nav {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 60px;
+    background-image: url("assets/whiteLaceTrim.png");
+    background-repeat: repeat-x;
+    background-size: auto 60px;
+    filter: drop-shadow(0 7px 3px #752f8a59);
+    pointer-events: none;
+}
+
+#logo {
+    font-size: 3rem;
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+    margin-right: 40px;
+}
+
+#logo a {
+    text-decoration: none;
+    color: #752F8A;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+ul a {
+    position: relative;
+    padding-bottom: 6px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+ul a:hover {
+    color: #752F8A;
+}
+
+ul a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #752F8A;
+    transform: translateX(-50%);
+    transition: width 0.2s ease;
+}
+
+ul a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    padding: 90px 0 110px;
+
+}
+
+.striped-bg {
+    background: repeating-linear-gradient(
+        90deg,
+        #EADCF0,
+        #EADCF0 60px,
+        #F6EEF8 60px,
+        #F6EEF8 120px
+    );    
+}
+
+.hero-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 520px;
+}
+
+#hero-intro, #hero-name {
+    color: #752F8A;
+    font-family: "Molle", cursive;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.08em;
+    margin: 0 0 5px;
+}
+
+#hero-intro {
+    font-size: 2rem;
+}
+
+#hero-name {
+    font-size: clamp(4rem, 8vw, 6rem);
+    line-height: 1;
+}
+
+#hero-education {
+    max-width: 500px;
+    margin: 25px 0 30px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#view-btn {
+    text-decoration: none;
+    background-color: #752F8A;
+    padding: 15px 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#contact-btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid #752F8A;
+    padding: 15px 40px;
+    margin-left: 10px;
+    color: #752F8A;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero-right {
+    position: relative;
+    flex: 0 1 400px;
+}
+
+.image-frame img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 200px 200px 0 0;
+    outline: 2px solid #752F8A;
+    outline-offset: 10px;
+    pointer-events: none;
+}
+
+#hero-plant {
+    position: absolute;
+    width: 300px;
+    right: -90px;
+    bottom: -60px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.icons {
+    position: absolute;
+    color: #752F8A;
+    z-index: 3;
+    pointer-events: none;
+    user-select: none;
+    font-size: 2rem;
+}
+
+#bow-one {
+    top: -40px;
+    left: 173px;
+    font-size: 3rem;
+    font-weight: bolder;
+    letter-spacing: -6px;
+}
+
+#sparkle-one {
+    top: 20px;
+    left: -50px;
+}
+
+#sparkle-two {
+    top: 250px;
+    left: 450px;
+}
