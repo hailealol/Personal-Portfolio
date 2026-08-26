@@ -71,7 +71,7 @@ ul a {
     position: relative;
     padding-bottom: 6px;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -99,8 +99,7 @@ ul a:hover::after {
 
 /* Hero Section */
 .hero {
-    padding: 90px 0 110px;
-
+    padding: 90px 110px;
 }
 
 .striped-bg {
@@ -137,7 +136,7 @@ ul a:hover::after {
 }
 
 #hero-intro {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 #hero-name {
@@ -205,7 +204,7 @@ ul a:hover::after {
     z-index: 3;
     pointer-events: none;
     user-select: none;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 #bow-one {
@@ -224,4 +223,70 @@ ul a:hover::after {
 #sparkle-two {
     top: 250px;
     left: 450px;
+}
+
+/* About Me Section*/
+.about {
+    padding: 50px 0;
+}
+
+.about-main {
+    position: relative;
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
+.about-text {
+    position: relative;
+    z-index: 2;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.section-heading h2 {
+    color: #752F8A;
+    margin: 0 20px 0 20px;
+}
+
+.section-line {
+    width: 250px;
+    height: 1px;
+    justify-self: center;
+    background-color: #752F8A;
+}
+
+.about-description {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-plant {
+    position: absolute;
+    width: 150px;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+}
+
+#about-plant-left {
+    left: 120px;
+    bottom: -10px;
+    transform: scaleX(-1);
+}
+
+#about-plant-right {
+    right: 120px;
+    bottom: -10px;
 }
