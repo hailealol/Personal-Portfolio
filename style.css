@@ -195,7 +195,13 @@ ul a:hover::after {
 
 .hero-right {
     position: relative;
+    width: min(400px, 80vw);
     flex: 0 1 400px;
+}
+
+.image-frame {
+    width: 100%;
+    position: relative;
 }
 
 .image-frame img {
@@ -231,20 +237,21 @@ ul a:hover::after {
 
 #bow-one {
     top: -40px;
-    left: 173px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 3rem;
     font-weight: bolder;
     letter-spacing: -6px;
 }
 
 #sparkle-one {
-    top: 20px;
-    left: -50px;
+    top: 5%;
+    left: -8%;
 }
 
 #sparkle-two {
-    top: 250px;
-    left: 450px;
+    top: 42%;
+    right: -20%;
 }
 
 /* about me section*/
@@ -601,9 +608,33 @@ footer p {
     #logo {
         font-size: 1.9rem;
     }
+}
+
+@media (max-width: 1150px) {
+    #sparkle-two {
+        right: -15%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #sparkle-one {
+        left: -15%;
+    }
 
     #sparkle-two {
-        left: 330px;
+        right: -20%;
+    }
+}
+
+@media (max-width: 907px) {
+    .image-frame img {
+        height: 300px;
+    }
+
+    #hero-plant {
+        width: 150px;
+        right: -20%;
+        bottom: -10%;
     }
 }
 
@@ -687,6 +718,24 @@ footer p {
         text-align: center;
     }
 
+    .image-frame img {
+        height: 600px;
+    }
+
+    #sparkle-one {
+        left: 2%;
+    }
+
+    #sparkle-two {
+        right: -10%;
+    }
+
+    #hero-plant {
+        width: 300px;
+        right: -90px;
+        bottom: -60px;
+    }
+
     #about-plant-left {
         left: 40px;
     }
@@ -698,16 +747,11 @@ footer p {
 
 @media (max-width: 547px) {
     .image-frame img {
-        height: 400px;
+        height: 600px;
     }
 
     #sparkle-two {
-        left: 270px;
-        top: 120px;
-    }
-
-    #bow-one {
-        left: 90px;
+        right: -10%;
     }
 
     #hero-plant {
