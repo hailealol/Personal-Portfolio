@@ -99,7 +99,7 @@ ul a:hover::after {
 
 /* Hero Section */
 .hero {
-    padding: 90px 110px;
+    padding: 120px 110px;
 }
 
 .striped-bg {
@@ -313,7 +313,7 @@ ul a:hover::after {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .card {
@@ -325,9 +325,10 @@ ul a:hover::after {
     border-radius: 10px;
     transition: transform 0.25s ease;
     margin: 15px 15px 40px 15px;
+    background-color: #FFFFFF;
 }
 
-.card:hover {
+.card:hover, .skill:hover {
     transform: translateY(-8px);
 }
 
@@ -389,4 +390,92 @@ ul a:hover::after {
 
 .card-btns {
     margin-top: 10px;
+}
+
+/* Skills Section */
+.skills {
+    position: relative;
+    padding: 50px 0;
+}
+
+.skills::before, .skills::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-image: url("assets/whiteLaceTrim.png");
+    background-repeat: repeat-x;
+    background-size: auto 40px;
+    pointer-events: none;
+    filter: drop-shadow(0 7px 3px #752f8a59);
+}
+
+.skills::before {
+    top: 0;
+    background-position: top;
+}
+
+.skills::after {
+    bottom: 0;
+    background-position: bottom;
+    transform: rotate(180deg);
+}
+
+.skills-main {
+    position: relative;
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.25s ease;
+}
+
+.skill-square {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6EEF8;
+    border: 2px solid #EADCF0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #752f8a59;
+}
+
+.skill-square i {
+    font-size: 3.5rem;
+    color: #752F8A;
+}
+
+.skill span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    color: #752F8A;
+}
+
+#bow-two {
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    font-weight: bolder;
+    letter-spacing: -11px;
 }
