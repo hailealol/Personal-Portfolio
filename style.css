@@ -614,6 +614,14 @@ footer p {
     #sparkle-two {
         right: -15%;
     }
+
+    #about-plant-left {
+        left: 10%;
+    }
+
+    #about-plant-right {
+        right: 10%;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -737,11 +745,17 @@ footer p {
     }
 
     #about-plant-left {
-        left: 40px;
+        left: 5%;
     }
 
     #about-plant-right {
-        right: 40px;
+        right: 5%;
+    }
+}
+
+@media (max-width: 851px) {
+    #view-btn, #contact-btn {
+        width: 120px;
     }
 }
 
