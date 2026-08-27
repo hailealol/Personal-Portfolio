@@ -15,12 +15,12 @@ body {
     background-color: #FFFFFF;
 }
 
-/* Button Animations */
+/* button animations */
 .card:hover, .skill:hover, .contact-btn:hover, .hero-btn:hover {
     transform: translateY(-8px);
 }
 
-/* Navbar */
+/* navbar */
 header {
     position: sticky;
     top: 0;
@@ -66,6 +66,10 @@ nav::after {
     color: #752F8A;
 }
 
+.menu-btn {
+    display: none;
+}
+
 ul {
     display: flex;
     gap: 40px;
@@ -102,7 +106,7 @@ ul a:hover::after {
     width: 100%;
 }
 
-/* Hero Section */
+/* hero section */
 .hero {
     padding: 120px 110px;
 }
@@ -243,7 +247,7 @@ ul a:hover::after {
     left: 450px;
 }
 
-/* About Me Section*/
+/* about me section*/
 .about {
     padding: 50px 0;
 }
@@ -317,7 +321,7 @@ ul a:hover::after {
     bottom: -10px;
 }
 
-/* Projects Section */
+/* projects section */
 .projects {
     padding: 50px 0;
 }
@@ -410,7 +414,7 @@ ul a:hover::after {
     margin-top: 10px;
 }
 
-/* Skills Section */
+/* skills section */
 .skills {
     position: relative;
     padding: 50px 0;
@@ -498,7 +502,7 @@ ul a:hover::after {
     letter-spacing: -11px;
 }
 
-/* Contact Section */
+/* contact section */
 .contact {
     padding: 50px 0 70px 0;
 }
@@ -534,7 +538,7 @@ ul a:hover::after {
     color: #752F8A;
 }
 
-/* Footer */
+/* footer */
 footer {
     padding: 45px 20px 25px;
     background: #752F8A;
@@ -611,27 +615,68 @@ footer p {
         min-height: auto;
     }
 
+    .nav-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        width: 90%;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
     #logo {
-        margin-right: 0;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #752F8A;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: transform 0.25s ease;
+    }
+
+    .menu-btn.open {
+        transform: rotate(90deg);
     }
 
     nav {
-        position: relative;
         width: 100%;
         height: auto;
         margin: 0;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 20px 0 30px;
+        padding: 0;
     }
 
-    nav ul {
+    .nav-links {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
         z-index: 10;
-        margin-top: 15px
+        pointer-events: none;
+        margin-top: 15px;
+        transition:
+            max-height 0.35s ease,
+            opacity 0.25s ease,
+            transform 0.3s ease,
+            margin-top 0.3s ease;
+    }
+
+    .nav-links.open {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 
     .hero-container {
