@@ -161,14 +161,19 @@ ul a:hover::after {
 }
 
 .hero-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    padding: 0 20px;
+    white-space: nowrap;
     transition: transform 0.2s ease;
 }
 
 #view-btn {
     text-decoration: none;
     background-color: #752F8A;
-    padding: 15px 40px;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 6px;
@@ -177,8 +182,7 @@ ul a:hover::after {
 #contact-btn {
     text-decoration: none;
     background-color: transparent;
-    border: 2px solid #752F8A;
-    padding: 15px 40px;
+    border: 2px solid #752F8A;;
     margin-left: 10px;
     color: #752F8A;
     border-radius: 6px;
@@ -318,7 +322,7 @@ ul a:hover::after {
     padding: 50px 0;
 }
 
-.project-main {
+.projects-main {
     position: relative;
     width: min(1100px, 90%);
     margin: 0 auto;
@@ -499,6 +503,13 @@ ul a:hover::after {
     padding: 50px 0 70px 0;
 }
 
+.contact-main {
+    position: relative;
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
 .contact-list {
     display: flex;
     justify-content: center;
@@ -563,4 +574,130 @@ footer p {
     font-size: 0.8rem;
     opacity: 0.8;
     color: #FFFFFF;
+}
+
+@media (max-width: 1315px) {
+    nav {
+        width: 75%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    #logo {
+        font-size: 1.9rem;
+    }
+
+    #sparkle-two {
+        left: 330px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        background-color: #FFFFFF;
+        height: auto;
+        min-height: auto;
+    }
+
+    #logo {
+        margin-right: 0;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        z-index: 10;
+        margin-top: 15px
+    }
+
+    .hero-container {
+        flex-direction: column;
+    }
+
+    #hero-intro, #hero-name, #hero-education {
+        text-align: center;
+    }
+
+    #about-plant-left {
+        left: 40px;
+    }
+
+    #about-plant-right {
+        right: 40px;
+    }
+}
+
+@media (max-width: 547px) {
+    .image-frame img {
+        height: 400px;
+    }
+
+    #sparkle-two {
+        left: 270px;
+        top: 120px;
+    }
+
+    #bow-one {
+        left: 90px;
+    }
+
+    #hero-plant {
+        width: 200px;
+        right: -50px;
+        bottom: -40px;
+    }
+
+    .hero-left {
+        text-align: center;
+    }
+
+    #view-btn, #contact-btn {
+        margin-top: 20px;
+        width: 120px;
+    }
+
+    .about-main, .projects-main, .skills-main, .contact-main {
+        width: 100%;
+        padding: 40px 10px;
+    }
+
+    .about-description {
+        max-width: 300px;
+        font-size: 1.1rem;
+    }
+
+
+    #about-plant-left {
+        left: 5px;
+        bottom: -30px;
+    }
+
+    #about-plant-right {
+        right: 5px;
+        bottom: -30px;
+    }
 }
